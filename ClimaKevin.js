@@ -1,143 +1,80 @@
-/*1) No contexto da programação em JavaScript, quando queremos armazenar
-algum valor para uso futuro, usamos o conceito de "variáveis". Uma variável pode
-ser declarada usando a palavra-chave "var". Então, como uma tarefa prática,
-declare uma variável chamada "favoriteFood" usando a palavra-chave "var" e
-atribua a ela a string 'pizza'. */
+/*1-A previsão do tempo para hoje é de 293 Kelvin. Para começar, crie uma variável
+chamada "kelvin" e atribua a ela o valor 293. O valor armazenado na variável
+"kelvin" permanecerá constante. Escolha o tipo de variável que é mais adequado
+para manter esse valor constante. */
 
-var favoriteFood = "pizza"
+var Kelvin = 293
+console.log(Kelvin)
 
-/*2) Continuando a praticar a declaração de variáveis, agora declare uma outra
-variável chamada "numOfSlices". Novamente, utilize a palavra-chave "var" e
-desta vez atribua a ela o número 8. Isto simboliza, por exemplo, o número de
-fatias que uma pizza poderia ter. */
+/*2-Escreva um comentário acima que explique a linha de código que você acabou
+de escrever. */
 
-var numOfSlices = 8
+console.log(" uma variavel foi cirada usando o let e foi adicionado o valor 293 a ela")
 
-/* 3) Agora que você tem duas variáveis declaradas ("favoriteFood" e
-"numOfSlices"), vamos imprimi-las para verificar se estão armazenando os
-valores corretamente. No JavaScript, usamos o comando "console.log()" para
-isso. Primeiro, imprima o valor armazenado em "favoriteFood". Lembre-se,
-"console.log()" é uma maneira de visualizar a saída de seu código no console do
-seu navegador ou ambiente de desenvolvimento. */
+/*3-Celsius é similar a Kelvin — a única diferença é que Celsius é 273 graus menor
+que Kelvin. Vamos converter Kelvin para Celsius subtraindo 273 da variável
+"kelvin". Armazene o resultado em outra variável, chamada "celsius". */
 
-console.log(favoriteFood)
+var Celsius = Kelvin - 273
+console.log(celsius)
 
-/*4)Agora, da mesma forma que você imprimiu "favoriteFood", use o comando
-"console.log()" para imprimir o valor armazenado em "numOfSlices". Isso ajudará
-você a verificar se a variável "numOfSlices" está armazenando corretamente o
-valor que você atribuiu a ela. */
+/*4-Escreva um comentário acima que explique a linha de código que você acabou
+de escrever. */
 
-console.log(numOfSlices)
+console.log("criou uma variavel com nome de celsius e diminuiu 273 da variavel kelvin")
 
-/*5)Você usou a palavra-chave "var" para declarar variáveis até agora, mas
-JavaScript também fornece outras duas palavras-chave para declaração de
-variáveis - "let" e "const". Pesquise e explique a diferença entre "var" e "let". A
-diferença entre esses dois é crucial para entender o escopo das variáveis em
-JavaScript.*/
+/*5-Use a seguinte fórmula para calcular Fahrenheit, e então armazene o resultado
+em uma variável chamada "fahrenheit". A fórmula é: Fahrenheit = Celsius * (9/5)
++ 32. No próximo passo, iremos arredondar o número salvo na variável
+"fahrenheit". Escolha o tipo de variável que permite que você altere seu valor. */
 
-console.log("Uma variavel declarada com vartem o escopo global no código e uma variavel declarada com let possui um escopo de bloco")
+var Fahrenheit = Celsius * (9/5) + 32
+console.log(Fahrenheit)
 
-/*6)Vamos praticar a declaração de variáveis com "let" agora. Declare uma variável
-chamada "changeMe" usando a palavra-chave "let" e atribua a ela o valor
-booleano "true". Os booleanos são um tipo de dados em JavaScript que
-representam verdadeiro (true) ou falso (false). */
+/*6-Escreva um comentário acima que explique a linha de código que você acabou
+de escrever.*/
 
-let changeMe = true
+console.log("criou a variavel fahrenheit e calculou usando sua formula e o valor de celsius")
 
-/* 7)Em seguida, na linha após a declaração de "changeMe", reatribua o valor de
-"changeMe" para o booleano "false". A palavra-chave "let" permite que você
-reatribua valores às variáveis declaradas por ela, o que será útil quando o valor
-que uma variável precisa armazenar muda ao longo do tempo. */
+/*7-Quando você converte de Celsius para Fahrenheit, geralmente obtém um
+número decimal. Use o método .floor() do objeto Math para arredondar para
+baixo a temperatura em Fahrenheit. Salve o resultado na variável "fahrenheit". */
 
- changeMe = false
+ Fahrenheit = Math.floor(Fahrenheit)
+ console.log(Fahrenheit)
 
-/*8)Para verificar se "changeMe" foi reatribuído com sucesso, imprima o valor salvo
-em "changeMe" no console usando "console.log()". Essa é uma boa prática para
-garantir que suas reatribuições de variáveis estão funcionando conforme
-esperado. */
+/*8-Escreva um comentário acima que explique a linha de código que você acabou
+de escrever. */
 
-console.log(changeMe)
+console.log("foi utilizada a função math.floor para arredondar para o numero inteiro mais baixo")
 
-/*9)Agora, vamos explorar a declaração de variáveis com "const". Declare uma
-variável constante chamada "entree" e atribua a ela a string 'Enchiladas'. "const"
-é uma palavra-chave que declara uma variável cujo valor não pode ser reatribuído
-depois. */
+/*9-Use console.log e interpolação de string para registrar no console a
+temperatura em Fahrenheit da seguinte forma: "A temperatura é TEMPERATURA
+graus Fahrenheit". Use a interpolação de string para substituir "TEMPERATURA"
+pelo valor armazenado na variável "fahrenheit". */
 
-const entree = "Enchiladas"
+var Temperatura = Fahrenheit
+console.log(`A temperatura é ${Temperatura} fahrenheit`)
 
-/*10)Para verificar se você salvou o valor de 'Enchiladas' em "entree" corretamente,
-imprima o valor de "entree" no console usando "console.log()". */
+/*11-Ao usar variáveis, seu programa deve funcionar para qualquer temperatura
+em Kelvin — basta alterar o valor de "kelvin" e executar o programa novamente.
+Qual seria a temperatura correspondente a 0 Kelvin em Fahrenheit? */
 
-console.log(entree)
+let kelvin_Fahrenheit = (Kelvin) => (Kelvin - 273.15) * 9/5 + 32;
 
-/*11)Vamos testar a imutabilidade de variáveis declaradas com "const". Tente
-reatribuir um valor diferente à variável "entree". Isso deve gerar um erro, pois
-uma variável "const" não pode ser reatribuída após a sua declaração inicial. Este
-é um importante conceito em JavaScript que ajuda a prevenir erros indesejados
-de reatribuição. */
+let kelvin = 0;
+let fahrenheit = kelvin_Fahrenheit(Kelvin);
 
-// const entree = "senac"
+console.log(`A temperatura de ${Kelvin} Kelvin é igual a ${Fahrenheit} Fahrenheit.`);
+ 
 
-/*12)No JavaScript, temos operadores de atribuição que nos permitem atualizar
-rapidamente o valor de uma variável com base em seu valor atual. Por exemplo,
-o operador "+=" adiciona o valor à direita ao valor atual da variável. Utilize o
-operador "+=" para aumentar o valor armazenado em uma variável "levelUp" por
-5. */
+/*12-Ótimo trabalho! Agora Kelvin pode publicar suas previsões tanto em Celsius
+quanto em Fahrenheit. Se você quiser praticar um pouco mais, tente fazer o
+seguinte: Converta Celsius para a escala Newton usando a equação abaixo:
+Newton = Celsius * (33/100). Arredonde a temperatura em Newton para baixo
+usando o método .floor(). Use console.log e interpolação de string para registrar
+no console a temperatura em Newton. */
 
-let levelUp = 7
-console.log(levelUp += 5)
-
-/*13)Da mesma forma, o operador "-=" subtrai o valor à direita do valor atual da
-variável. Use o operador "-=" para diminuir o valor armazenado em uma variável
-"powerLevel" por 100. */
-
-let powerLevel = 1910
-console.log(powerLevel -= 100)
-
-/*14)O operador “*=“ multiplica o valor atual da variável pelo valor à direita do
-operador. Use o operador “*=“ para multiplicar o valor armazenado em uma
-variável "multiplyMe" por 11. */
-
-let multiplyMe = 130
-console.log(multiplyMe *= 11)
-
-/*15)O operador "/=" divide o valor atual da variável pelo valor à direita do
-operador. Use o operador "/=" para dividir o valor armazenado em uma variável
-"quarterMe" por 4. */
-
-let quarterMe = 100
-console.log(quarterMe /= 4)
-
-/*  16)O operador "++" é conhecido como operador de incremento. Ele aumenta o
-valor da variável em 1. Usando o operador de incremento, aumente o valor de
-uma variável "gainedDollar" que inicialmente é declarada valendo 1. */
-let gainedDollar = 77
-console.log(++gainedDollar)
-
-
-/*17)De maneira semelhante, o operador "--" é o operador de decremento. Ele
-diminui o valor da variável em 1. Usando o operador de decremento, diminua o
-valor de uma variável "lostDollar". */
-
-let lostDollar = 66
-console.log(--lostDollar)
-
-/*18)No JavaScript, podemos usar "template literals" para incorporar expressões
-dentro de strings de texto. Isso é útil quando queremos inserir o valor de uma
-variável dentro de uma string. Use um único "template literal" para interpolar
-suas variáveis na frase "My name is NAME. My favorite city is CITY." Substitua
-"NAME" e "CITY" na string acima interpolando os valores salvos em variáveis
-"myName" e "myCity". Use "console.log()" */
-
-
-const faculdade = "Senac"
-let texto = `eu estudo no ${faculdade}`
-console.log(texto)
-
-/*19)O operador "typeof" em JavaScript retorna uma string indicando o tipo de
-dado de uma variável. Use "console.log()" para imprimir o tipo de uma variável
-"newVariable". Isso pode ser útil para debugar seu código se você não tem
-certeza do tipo de uma variável em algum momento. */
-
-let newVariable = false
-console.log(typeof newVariable)
+var Newton = Celsius * (33/100)
+Newton = Math.floor(Newton)
+console.log(`A temperatura em newton é ${Newton}`)
